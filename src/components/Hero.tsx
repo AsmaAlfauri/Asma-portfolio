@@ -1,0 +1,106 @@
+"use client"
+import { motion } from "framer-motion";
+import { Server, Layout, Database, ArrowRight, Code2 } from "lucide-react";
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#020617]">
+      {/* خلفية تقنية معاصرة (Abstract Mesh) */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600/20 blur-[120px] rounded-full" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col items-center text-center">
+          
+          {/* Senior Level Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-2 px-3 py-1 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-mono mb-8"
+          >
+            <span className="text-emerald-500 font-bold">●</span>
+            Available for Senior Roles
+          </motion.div>
+
+          {/* Main Title - التركيز على الأنظمة المتكاملة */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-8xl font-extrabold tracking-tight text-white mb-6"
+          >
+            Architecting <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-400">
+              End-to-End Systems
+            </span>
+          </motion.h1>
+
+          {/* Bio - التركيز على الـ Stack والخبرة العميقة */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="max-w-3xl text-slate-400 text-lg md:text-xl leading-relaxed mb-10"
+          >
+            <span className="text-slate-100 font-medium">Senior Full-Stack Engineer</span> specialized in building high-performance 
+            web applications. With <span className="text-white">5+ years</span> of industry experience, I transform 
+            complex business requirements into scalable <span className="font-mono text-blue-400">MERN/PERN</span> architectures.
+          </motion.p>
+
+          {/* Metrics - لإظهار ثقل الخبرة */}
+          <motion.div 
+             initial={{ opacity: 0 }}
+             animate={{ opacity: 1 }}
+             transition={{ delay: 0.2 }}
+             className="flex gap-8 md:gap-16 mb-12 border-y border-slate-800/50 py-6"
+          >
+            <div className="text-center">
+                <p className="text-2xl font-bold text-white">5+</p>
+                <p className="text-xs text-slate-500 uppercase tracking-widest uppercase font-semibold">Years Exp.</p>
+            </div>
+            <div className="text-center">
+                <p className="text-2xl font-bold text-white">MERN</p>
+                <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Stack Focus</p>
+            </div>
+            <div className="text-center">
+                <p className="text-2xl font-bold text-white">100+</p>
+                <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Developers Mentored</p>
+            </div>
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <button className="px-8 py-4 bg-white text-black hover:bg-slate-200 rounded-lg font-bold transition-all">
+              Review My Stack
+            </button>
+            <button className="px-8 py-4 border border-slate-700 text-white hover:bg-slate-800 rounded-lg font-bold transition-all">
+              View Case Studies
+            </button>
+          </motion.div>
+
+          {/* Tech Ecosystem Icons */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="mt-16 flex gap-6 text-slate-600"
+          >
+            <Layout size={24} strokeWidth={1.5} />
+            <Server size={24} strokeWidth={1.5} />
+            <Database size={24} strokeWidth={1.5} />
+            <Code2 size={24} strokeWidth={1.5} />
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
