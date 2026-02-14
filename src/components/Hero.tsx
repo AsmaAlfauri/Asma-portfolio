@@ -5,7 +5,7 @@ import { Server, Layout, Database, ArrowRight, Code2 } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#020617]">
-      {/* خلفية تقنية معاصرة (Abstract Mesh) */}
+
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-600/20 blur-[120px] rounded-full" />
@@ -24,7 +24,7 @@ const Hero = () => {
             Available for Senior Roles
           </motion.div>
 
-          {/* Main Title - التركيز على الأنظمة المتكاملة */}
+          {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const Hero = () => {
             </span>
           </motion.h1>
 
-          {/* Bio - التركيز على الـ Stack والخبرة العميقة */}
+          {/* Bio*/}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const Hero = () => {
             complex business requirements into scalable <span className="font-mono text-blue-400">MERN/PERN</span> architectures.
           </motion.p>
 
-          {/* Metrics - لإظهار ثقل الخبرة */}
+          {/* Metrics*/}
           <motion.div 
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
@@ -76,12 +76,6 @@ const Hero = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <button className="px-8 py-4 bg-white text-black hover:bg-slate-200 rounded-lg font-bold transition-all">
-              Review My Stack
-            </button>
-            <button className="px-8 py-4 border border-slate-700 text-white hover:bg-slate-800 rounded-lg font-bold transition-all">
-              View Case Studies
-            </button>
           </motion.div>
 
           {/* Tech Ecosystem Icons */}
