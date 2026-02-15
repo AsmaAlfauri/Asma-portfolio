@@ -31,7 +31,7 @@ export const PROJECTS = [
       "Recharts",
       "MVC",
     ],
-    link: "https://fitra-ykng.vercel.app/",
+    link: "https://fitra-chi.vercel.app/",
     github: "https://github.com/AsmaAlfauri/Fitra",
     features: [
       "Manage campaigns, donations, and users with role-based access",
