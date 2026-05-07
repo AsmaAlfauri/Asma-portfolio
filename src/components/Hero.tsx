@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import { Server, Layout, Database, ArrowRight, Code2 } from "lucide-react";
+import { Server, Layout, Database, Code2 } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -14,14 +14,14 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
           
-          {/* Senior Level Badge */}
+          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-2 px-3 py-1 rounded-md border border-slate-800 bg-slate-900/50 text-slate-400 text-xs font-mono mb-8"
           >
             <span className="text-emerald-500 font-bold">●</span>
-            Available for Senior Roles
+            Open to Frontend / Full-Stack Opportunities
           </motion.div>
 
           {/* Main Title */}
@@ -30,25 +30,25 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-8xl font-extrabold tracking-tight text-white mb-6"
           >
-            Architecting <br />
+            Building Scalable <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-400">
-              End-to-End Systems
+              Web Applications
             </span>
           </motion.h1>
 
-          {/* Bio*/}
+          {/* Bio */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="max-w-3xl text-slate-400 text-lg md:text-xl leading-relaxed mb-10"
           >
-            <span className="text-slate-100 font-medium">Senior Full-Stack Engineer</span> specialized in building high-performance 
-            web applications. With <span className="text-white">5+ years</span> of industry experience, I transform 
-            complex business requirements into scalable <span className="font-mono text-blue-400">MERN/PERN</span> architectures.
+            Frontend Engineer specializing in React and Next.js ecosystems, focused on building 
+            performant, scalable, and maintainable web applications. Experienced in frontend architecture, 
+            state management, and delivering production-ready features in collaborative teams.
           </motion.p>
 
-          {/* Metrics*/}
+          {/* Metrics */}
           <motion.div 
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
@@ -57,28 +57,21 @@ const Hero = () => {
           >
             <div className="text-center">
                 <p className="text-2xl font-bold text-white">5+</p>
-                <p className="text-xs text-slate-500 uppercase tracking-widest uppercase font-semibold">Years Exp.</p>
+                <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Years Experience</p>
             </div>
+
             <div className="text-center">
-                <p className="text-2xl font-bold text-white">MERN</p>
-                <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Stack Focus</p>
+                <p className="text-2xl font-bold text-white">React</p>
+                <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Core Stack</p>
             </div>
+
             <div className="text-center">
                 <p className="text-2xl font-bold text-white">100+</p>
                 <p className="text-xs text-slate-500 uppercase tracking-widest font-semibold">Developers Mentored</p>
             </div>
           </motion.div>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-          </motion.div>
-
-          {/* Tech Ecosystem Icons */}
+          {/* Tech Icons */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
