@@ -4,7 +4,6 @@ import { Github, Mail, Phone, FileText, Linkedin, ArrowUpRight } from "lucide-re
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <footer className="py-20 px-6 border-t border-slate-900 bg-[#020617]">
       <div className="max-w-7xl mx-auto">
