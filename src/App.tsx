@@ -1,40 +1,25 @@
-import { useDarkMode } from './hooks/useDarkMode'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 
-const sections = [
-  'about',
-  'skills',
-  'experience',
-  'projects',
-  'testimonials',
-  'contact',
-]
+import About from './sections/About'
+import Skills from './sections/Skills'
+import Experience from './sections/Experience'
+import Projects from './sections/Projects'
+import Contact from './sections/Contact'
 
-function App() {
-  useDarkMode()
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors">
       <Navbar />
 
       <main>
         <Hero />
-
-        {sections.map(id => (
-          <section
-            key={id}
-            id={id}
-            className="min-h-screen flex items-center justify-center border-b border-gray-100 dark:border-gray-800 px-6"
-          >
-            <span className="text-2xl font-mono text-gray-400 capitalize">
-              {id}
-            </span>
-          </section>
-        ))}
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
     </div>
   )
 }
-
-export default App
