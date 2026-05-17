@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react'
 
 export function useDarkMode() {
-  const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem('theme') === 'dark' ||
-      (!localStorage.getItem('theme') &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-  })
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme')
+
+    if (
+      stored === 'dark' ||
+      (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setIsDark(true)
+    }
+  }, [])
 
   useEffect(() => {
     const root = document.documentElement
+
     if (isDark) {
       root.classList.add('dark')
       localStorage.setItem('theme', 'dark')
@@ -18,5 +26,8 @@ export function useDarkMode() {
     }
   }, [isDark])
 
-  return { isDark, toggle: () => setIsDark(prev => !prev) }
+  return {
+    isDark,
+    toggle: () => setIsDark(prev => !prev),
+  }
 }

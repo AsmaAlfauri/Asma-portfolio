@@ -51,7 +51,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen overflow-hidden px-6 flex items-center justify-center text-center"
     >
-      {/* Grid */}
+      {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-40 dark:opacity-20 pointer-events-none" />
 
       {/* Glow */}
@@ -84,9 +84,8 @@ export default function Hero() {
           with React, Next.js, TypeScript, and OpenAI integrations.
         </p>
 
-        {/* CTA (IMPORTANT CHANGE HERE) */}
+        {/* CTA */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-
           <a
             href="#projects"
             className="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-white font-semibold text-sm transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-amber-500/20"
@@ -100,7 +99,6 @@ export default function Hero() {
           >
             Get In Touch
           </a>
-
         </div>
 
         {/* Credibility */}
@@ -157,7 +155,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-gray-400 dark:text-gray-600">
         <span className="text-xs font-mono">scroll</span>
         <svg
