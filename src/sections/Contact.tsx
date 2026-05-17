@@ -1,25 +1,6 @@
-import { useState } from "react";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // مؤقتاً (لاحقاً ممكن نربطه EmailJS أو API)
-    alert("Message sent successfully 🚀");
-    setForm({ name: "", email: "", message: "" });
-  };
 
   return (
     <section id="contact" className="py-24 px-6 max-w-5xl mx-auto">
