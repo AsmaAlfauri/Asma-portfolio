@@ -1,16 +1,23 @@
 import { useDarkMode } from './hooks/useDarkMode'
+import Navbar from './components/Navbar'
 
 function App() {
-  const { isDark, toggle } = useDarkMode()
+  useDarkMode()
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-      <button onClick={toggle} className="fixed top-4 right-4 z-50 p-2 rounded-full border border-gray-300 dark:border-gray-700">
-        {isDark ? '☀️' : '🌙'}
-      </button>
-      <h1 className="text-4xl font-bold text-center pt-20">
-        Asma Alfauri
-      </h1>
+      <Navbar />
+      <main className="pt-16">
+        {['hero','about','skills','experience','projects','testimonials','blog','contact'].map(id => (
+          <section
+            key={id}
+            id={id}
+            className="min-h-screen flex items-center justify-center border-b border-gray-100 dark:border-gray-800"
+          >
+            <span className="text-2xl font-mono text-gray-400 capitalize">{id}</span>
+          </section>
+        ))}
+      </main>
     </div>
   )
 }
